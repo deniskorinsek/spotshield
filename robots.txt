@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deniskorinsek.github.io/Spotshield-Web/sitemap.xml
