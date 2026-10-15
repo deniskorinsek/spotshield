@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import content as C  # noqa: E402
 
 # ---- settings ------------------------------------------------------------------------------------
-SITE_URL = 'https://deniskorinsek.github.io/Spotshield-Web/'   # public URL of the site (used for canonical/og/sitemap links)
+SITE_URL = 'https://deniskorinsek.github.io/spotshield/'   # public URL of the site (used for canonical/og/sitemap links)
 DEFAULT_THEME = 'dark'                                          # 'dark' | 'light' | 'system'  (visitors can toggle; their choice is remembered)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # repository root
 OUT = ROOT

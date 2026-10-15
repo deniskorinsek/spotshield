@@ -16,21 +16,22 @@ sitemap.xml, robots.txt, .nojekyll
 
 ## Publish on GitHub Pages
 
-This folder lives inside the `spotshield` monorepo, like `distributionMedia/privacy-site` does. The website itself is published from its own public repository, the same way the privacy policies are published from `spotshield-privacy`.
+The local folder `Spotshield/Spotshield-Web` is its own git repository, pushed to the public GitHub repository
+`deniskorinsek/spotshield`, which GitHub Pages serves from branch `main`, folder `/ (root)`.
+The rest of the project lives in the private repository `deniskorinsek/spotshield-workspace`; the privacy
+policies are published from `spotshield-privacy`.
 
-1. Commit this folder to the monorepo as usual.
-2. Create an empty public repository called `Spotshield-Web` on GitHub (no README, no licence — it must be empty for the first push).
-3. From the monorepo root, push just this folder to that repository:
+Site: `https://deniskorinsek.github.io/spotshield/` (Slovenian page: `…/spotshield/sl/`).
 
-   ```sh
-   cd ~/Documents/Workspace/Spotshield
-   git subtree push --prefix=Spotshield-Web https://github.com/deniskorinsek/Spotshield-Web.git main
-   ```
+To publish a change, commit in this folder and push:
 
-   Run the same command again after every change you commit here. (If you prefer not to use subtree: clone `Spotshield-Web`, copy the contents of this folder into the clone, commit and push.)
+```sh
+cd ~/Documents/Workspace/Spotshield/Spotshield-Web
+git add -A && git commit -m "…" && git push
+```
 
-4. On GitHub open the `Spotshield-Web` repository → **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-5. After a minute the site is live at `https://deniskorinsek.github.io/Spotshield-Web/`. The Slovenian page is at `…/Spotshield-Web/sl/`.
+GitHub Pages updates the site within a minute or two. Note: renaming the GitHub repository changes the site address,
+and GitHub Pages does not redirect the old one.
 
 The pages use relative links, so they work from any folder or domain. Only the absolute URLs in the `<head>` (canonical, hreflang, Open Graph image) and in `sitemap.xml` / `robots.txt` assume the address above. If you host it somewhere else — a custom domain, a different repository name — change `SITE_URL` at the top of `tools/build.py` and run the generator (below), or search-and-replace the URL in those files.
 
