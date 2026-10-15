@@ -68,7 +68,7 @@ Styles are in `assets/css/site.css`; the colour palette for both themes is defin
 
 ## Links
 
-- Google Play: `https://play.google.com/store/apps/details?id=si.spotshield.<app>` — these go live once the apps are published.
+- Google Play: `https://play.google.com/store/apps/details?id=si.spotshield.<app>` — all eight apps are live on Google Play (checked 15 October 2026).
 - Privacy policies: `https://deniskorinsek.github.io/spotshield-privacy/<app>/`
 - Contact: `korinsekdenis+play@gmail.com`
 
